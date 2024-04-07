@@ -35,7 +35,7 @@ export class UrlsService {
       if (chaeckUrlInDB) {
         throw new ConflictException('la url ya existe');
       }
-      const dominio = 'http://localhost:3000/urls/';
+      const dominio = 'https://linkito.onrender.com/urls/';
 
       const urlCorta = this.createUrlCorta(createUrlDto.url_original);
 
@@ -164,7 +164,7 @@ export class UrlsService {
         if(existingUrl || existingUrltemp){
           throw new BadRequestException('la url ya esta registrada')
         }
-        const dominio = 'http://localhost:3000/urls/p/';
+        const dominio = 'https://linkito.onrender.com/urls/p/';
 
         const urlCorta = this.createUrlCorta(url.urloriginal);
 
