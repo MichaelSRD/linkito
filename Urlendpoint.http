@@ -1,0 +1,29 @@
+
+POST http://localhost:3000/urls HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1zcm9uYXlvMDVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTA1MjQ0MzEsImV4cCI6MTcxMDYxMDgzMX0.bqIOWssJlDhXPcFqjrTNf5sekKiNYpqSPvDFBmGkgCI
+
+{
+  "url_original": "https://www.google7.com/api/v1/"
+}
+
+###
+GET  http://localhost:3000/urls HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1zcm9uYXlvMDVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTA1MjQ0MzEsImV4cCI6MTcxMDYxMDgzMX0.bqIOWssJlDhXPcFqjrTNf5sekKiNYpqSPvDFBmGkgCI
+
+###
+PATCH http://localhost:3000/urls/8bb24792-c684-46ee-99ee-27948b0e71d0 HTTP/1.1
+Content-Type: application/json
+
+{
+  "url_original": "https://docs.nestjs.com/pipes",
+  "url_corta": "camilo"
+}
+
+###
+DELETE http://localhost:3000/Urls/f6466bd6-41d9-445d-9d1a-1b0cbe6e403c HTTP/1.1
+###
+GET  http://localhost:3000/urls/user/8bb24792-c684-46ee-99ee-27948b0e71d0 HTTP/1.1
+###
+GET  http://localhost:3000/urls/f52c8 HTTP/1.1
+
