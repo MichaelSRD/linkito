@@ -9,7 +9,10 @@ import { Role } from '../auth/role.enum';
 import { RolesGuard } from '../auth/auth-guard/roles.guard';
 import { UrlTempDto } from './dto/urltemp-dto';
 import { UserDto } from '../users/dto/user-dto';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
+@ApiBearerAuth()
+@ApiTags('Urls')
 @Controller('urls')
 @Roles(Role.User)
 @UseGuards(RolesGuard)
